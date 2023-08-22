@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css" type="text/css"/>
+    <title>Chat</title>
+</head>
+<body>
+    <main class="container">
+        <div class="top-menu">
+            <a href="whatsapp.html">
+            <div>
+                <img src="imagens/round-arrow-back-ios.svg" style="width: 21px; height: 17px; padding-top: 10px;">
+            </div>
+        </a>
+            <div>
+            <img class="avatar" id="avatarImg"
+            src="https://ui-avatars.com/api/?name=Betül+Erva&background=random&rounded=true">
+            </div>
+             <div id="topPerson" class="person"></div>
+             <div>
+                <img src="imagens/video-camera.svg" style="width: 25px; height: 20px; padding-top: 7px; padding-left: 30px;">
+             </div>
+            <div>
+                <img src="imagens/phone-outline.svg" style="width: 21px; height: 17px; padding-top: 10px;">
+            </div>
+            
+        </div>
+
+        <div id="chatPanel" class="chat">
+        </div>
+
+        <div class="bottom-menu">
+            <div>
+                <img src="imagens/plus.svg" style="width: 21px; height: 17px; padding-top: 2px;">
+            </div>
+            
+                <div class="searchUpperDiv">
+                    <input class="search" id="betul" type="text"  name="search">
+                </div>
+                
+                <div>
+                    <img class="imgIconClass" src="imagens/sticker-thin.svg">
+                </div>        
+            <div>
+                <img src="imagens/camera (1).svg" style="width: 21px; height: 17px; padding-top: 2px;">
+            </div>
+            <div>
+                <img src="imagens/microphone-outline.svg" style="width: 21px; height: 17px; padding-top: 2px;">
+            </div>
+          
+        </div>
+        <div>
+
+            <button style="display: none;" id="btn" onclick="myfunc()">
+        </div>
+
+    </main>
+    <script>
+        var urlParams;
+        var person;
+        var topPersonText;
+
+   
+
+        var topPersonHtml = document.getElementById("topPerson");
+
+        if (topPersonHtml) {
+            topPersonHtml.innerText = topPersonText;
+            var avatarImg = document.getElementById('avatarImg')
+        
+            avatarImg.src = "https://ui-avatars.com/api/?name="+topPersonText +"&background=random&rounded=true"
+
+        }
+
+        var messageList = []
+        var input = document.getElementById('betul')
+
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("btn").click();
+            }
+        });
+        function myfunc() {
+            var input = document.getElementById('betul');
+            if(input.value === null || input.value === '')
+                return;
+            messageList.push(input.value)
+            var chatPanel = document.getElementById('p');
+
+            document.getElementById('chatPanel').innerHTML = dynamicDoc("Ahmet","red")
+ //getTags(messageList,person)
+            input.value = ''
+
+        } 
+
+        function  getTags(messageList,person){
+            var returnValue = "<div>"
+            for(var i = 0; i < messageList.length; i++){
+                var newValue = " <div class='yazı'>"+ " <div class='name'>"+ name +"</div>" + messageList[i] +"</div>"
+                returnValue += newValue//returnValue + newValue
+            }
+            return returnValue + "</div>"
+
+        }
+
+        function dynamicDoc(name, color){
+            var returnValue = ''
+            returnValue = "<p class='name'>"+name+"</p>"+color+"</p>"
+            return returnValue
+        }
+    </script>    
+
+</body>
+</html>
