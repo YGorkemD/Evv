@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ekran.css" type="text/css"/>
+    <title>Ana Ekran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="top-menu"> <i class="fa-brands fa-servicestack" style="color: #72e3fc;"></i> 
+        <p>Task Tracker </p>  
+        <div style="width: 1060px;"></div>
+        <img class="bell" src="images/bell.svg"> 
+        <img class="three" src="images/three-line-horizontal.svg"> 
+    </div>
+    <div class="container">
+        <div class="left-menu">
+            <p class="yönetici">YÖNETİCİ</p>
+            <img class="profile-img" src="images/profile-circle-fill.svg">
+            <p class="isim">Kürşat Çiftçibaşı</p>
+            <div class="çizgi"></div>
+            <ul class="menu-list">
+                <li><i class="fas fa-home"></i> Home</li>
+                <li><i class="fas fa-user"></i> Profile</li>
+                <li><i class="fas fa-envelope"></i> Messages</li>
+                <!-- Add more items with icons here -->
+              </ul>
+        </div>
+        <div class="content">
+            <div class="to-do-list">
+                <p class="to-do-yazı">  TO DO LİST </p>
+                <div class="to-do">
+                    <div class="square">
+                        <div class="string"></div>
+                    </div>
+                    <div class="square">
+                        <div class="string"></div>
+                    </div>
+                    <div class="square">
+                        <div class="string"></div>
+                    </div>
+                    <div class="square">
+                        <div class="string"></div>
+                    </div>
+                    <div class="plus">
+                       <p style="margin-left: 20px;">+ Add More Note</p>      
+                    </div>
+                </div>
+            </div>
+          
+            <div class="personels">
+            <p style="margin: auto; font-family: cursive; font-size: x-large; color: #43382a;">PERSON</p>
+            <img class="avatar" id="avatarImg" src="https://ui-avatars.com/api/&amp;background=random&amp;rounded=true">
+            <input class="search" type="text" id="search" placeholder="" name="search">
+            <div class="line"></div>
+            <img class="avatar" id="avatarImg" src="https://ui-avatars.com/api/&amp;background=random&amp;rounded=true">
+            <input class="search" type="text" id="search" placeholder="" name="search">
+            <div class="line"></div>
+            <img class="avatar" id="avatarImg" src="https://ui-avatars.com/api/&amp;background=random&amp;rounded=true">
+            <input class="search" type="text" id="search" placeholder="" name="search">
+            <div class="line"></div>
+            <img class="avatar" id="avatarImg" src="https://ui-avatars.com/api/&amp;background=random&amp;rounded=true">
+            <input class="search" type="text" id="search" placeholder="" name="search">
+            <div class="line"></div>
+            <img class="avatar" id="avatarImg" src="https://ui-avatars.com/api/&amp;background=random&amp;rounded=true">
+            <input class="search" type="text" id="search" placeholder="" name="search">
+            <div class="line"></div>
+            <p style="margin-left: 20px; font-size: larger;">+ Add More Person</p>  
+            </div>
+            <!-- <img class="shush-img" src="images/Screen-Shot-2023-08-25-at-15.52.45.svg"> -->
+            
+            <div class="calendar">
+                <div class="header">
+                  <button id="prevBtn">&lt;</button>
+                  <h2 id="monthYear"></h2>
+                  <button id="nextBtn">&gt;</button>
+                </div>
+                <div class="weekdays">
+                  <div>Sun</div>
+                  <div>Mon</div>
+                  <div>Tue</div>
+                  <div>Wed</div>
+                  <div>Thu</div>
+                  <div>Fri</div>
+                  <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+              </div>
+              <script src="script.js"></script>
+        </div>
+        
+      </div>
+</body>
+</html>
